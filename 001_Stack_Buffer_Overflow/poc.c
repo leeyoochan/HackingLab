@@ -1,8 +1,13 @@
 #include<stdio.h>
 
-int main()
+
+void vuln()
 {
 	char buf[64];
-
 	scanf("%s", buf);
+}
+
+int main()
+{
+	vuln();
 }
