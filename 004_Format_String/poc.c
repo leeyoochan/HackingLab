@@ -8,10 +8,10 @@ void jump_to_here()
 void vuln()
 {
 	char buf[64];
-	scanf("%64s", buf);
+	read(0, buf, 64);
 	printf(buf);
-	
-	printf("End\n");
+
+	exit(0);	
 }
 
 int main()
