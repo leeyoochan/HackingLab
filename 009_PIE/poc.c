@@ -2,20 +2,14 @@
 #include <stdlib.h>
 #include <string.h>
 
-void jump_to_here()
-{
-	system("/bin/sh");
-}
-
 int main(int argc, char** argv) 
 {
 	int num;
 	char buf[64];
-	puts("Stack Canary Bypass Training!");
+	puts("PIE");
 
 	while(1)
 	{
-		printf(" > ");
 		scanf("%d", &num);
 		switch(num)
 		{
