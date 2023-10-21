@@ -4,18 +4,17 @@
 
 void jump_to_here()
 {
-	system("/bin/sh");
+	execve("/bin/sh", NULL, NULL);
 }
 
 int main(int argc, char** argv) 
 {
 	int num;
 	char buf[64];
-	puts("Stack Canary Bypass Training!");
+	puts("Canary");
 
 	while(1)
 	{
-		printf(" > ");
 		scanf("%d", &num);
 		switch(num)
 		{
@@ -27,6 +26,7 @@ int main(int argc, char** argv)
 				printf("%s\n", buf);
 				break;
 			default:
+				puts("Err\n");
 				return 0;
 		}
 	}
