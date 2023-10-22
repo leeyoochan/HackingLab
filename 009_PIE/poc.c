@@ -2,6 +2,11 @@
 #include <stdlib.h>
 #include <string.h>
 
+void jump_to_here()
+{
+	execve("/bin/sh", NULL, NULL);
+}
+
 int main(int argc, char** argv) 
 {
 	int num;
@@ -21,6 +26,7 @@ int main(int argc, char** argv)
 				printf("%s\n", buf);
 				break;
 			default:
+				puts("Err\n");
 				return 0;
 		}
 	}
