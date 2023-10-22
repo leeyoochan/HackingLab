@@ -7,7 +7,7 @@ void jump_to_here()
 	execve("/bin/sh", NULL, NULL);
 }
 
-int main(int argc, char** argv) 
+void start()
 {
 	int num;
 	char buf[64];
@@ -27,8 +27,13 @@ int main(int argc, char** argv)
 				break;
 			default:
 				puts("Err\n");
-				return 0;
+				return ;
 		}
 	}
+}
+
+int main(int argc, char** argv) 
+{
+	start();
 	return 0;
 }
